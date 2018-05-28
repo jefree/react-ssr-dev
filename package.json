@@ -1,0 +1,26 @@
+{
+  "name": "ssr-dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "livereload": "^0.7.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "webpack": "^4.9.1",
+    "webpack-cli": "^2.1.4"
+  },
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js -p",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch",
+    "server": "nodemon dist/server.js",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run server\""
+  }
+}
